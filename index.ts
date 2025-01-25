@@ -5,3 +5,6 @@ interface Result<T>{
     error: string | null; 
 }
 
+function fetch<T>(url : string) :Result<T>{
+    return {data: null, error: null}
+}
