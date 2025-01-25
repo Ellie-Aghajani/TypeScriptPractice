@@ -23,6 +23,12 @@ console.log(resultProduct.data?.title);
  
 
 //constrain generic type
-function echo<T extends number | string> (value: T) :T {
-    return value;
+// function echo<T extends number | string> (value: T) :T {
+//     return value;
+// }
+
+//constrain by an object
+function echo<T extends {name: string}>(value: T) :T{
+    return value
 }
+echo({name: 'Ellie' });
