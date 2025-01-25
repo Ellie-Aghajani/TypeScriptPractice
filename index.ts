@@ -20,3 +20,9 @@ console.log(resultUser.data?.username);
 
 let resultProduct = fetch<Product>('url');
 console.log(resultProduct.data?.title);
+ 
+
+//constrain generic type
+function echo<T extends number | string> (value: T) :T {
+    return value;
+}
