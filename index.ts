@@ -34,9 +34,18 @@ function echo<T extends {name: string}>(value: T) :T{
 echo({name: 'Ellie' });
 
 //constrain by interface
-interface Person {
-    name: string;
+// interface Person {
+//     name: string;
+// }
+// function check<T extends Person> (value: T) : T{
+//     return value;
+// }
+//constrain by class
+class Person {
+    constructor(public name:string){}
 }
-function check<T extends Person> (value: T) : T{
+
+function echoing<T extends Person>(value: T): T{
     return value;
 }
+echoing(new Person('a'));
